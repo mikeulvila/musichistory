@@ -1,6 +1,6 @@
 #main-header {
-  width: 80%;
-  margin: 0 auto;
+  width: 800px;
+  margin: 30px 92px 0 92px;
   background-color: #ffb4b0;
   border: 2px solid black;
 }
@@ -14,7 +14,7 @@
   list-style-type: none;
   padding: 0;
   display: inline-block;
-  margin: 20px 0 20px 15px;
+  margin: 20px 0 20px 20px;
 }
 
 ul#nav-bar li {
@@ -36,10 +36,16 @@ ul#nav-bar li a {
 /*------------SIDE NAV---------------*/
 
 #side-nav {
+  width: 186px;
+  height: 371px;
   background-color: #4dd7fa;
   border: 2px solid black;
+  margin: 15px 15px 0 94px;
 }
 
+label {
+  display: block;
+}
 
 
 
