@@ -7,64 +7,112 @@
   </head>
 
   <body>
-  	<header id="main-header">
-      <ul id="nav-bar">
-        <li><a href="#">View Music</a></li>
-        <li class="leftnavborder"><a href="#">Add Music</a></li>
-        <li class="leftnavborder"><a href="#">Profile</a></li>
-      </ul>
-    </header>
+  	<div id="body-div">
+	  	<header id="main-header">
+	      <ul id="nav-bar">
+	        <li><a href="#">View Music</a></li>
+	        <li class="leftnavborder"><a href="#">Add Music</a></li>
+	        <li class="leftnavborder"><a href="#">Profile</a></li>
+	      </ul>
+	    </header>
 
-<!--_________SIDE NAV BAR___________________-->
+	<!--_________SIDE NAV BAR___________________-->
 
-	<div id="side-nav">
-		<form method="post">
-			<div class="inner-side-nav">
-				<label for="song-length">Song length:</label>
-				<input type="range" name="song-length" min="0" max="10" step="1" value="5">
-			</div>
-			<div class="inner-side-nav">
-				<label for="artist">Artist:</label>
-				<select id="artist">
-					<option>Options</option>
-					<option>The Beatles</option>
-					<option>Michael Jackson</option>
-					<option>Tom Petty</option>
-					<option>Eagles</option>
-					<option>Pearl Jam</option>
-				</select>	
-			</div>
-			<div class="inner-side-nav">
-				<label for="album">Album:</label>
-				<select id="album">
-					<option>Options</option>
-					<option>Abbey Road</option>
-					<option>Thriller</option>
-					<option>Damn The Torpedos</option>
-					<option>Hotel California</option>
-					<option>Ten</option>
-				</select>
-			</div>
-			<div class="inner-side-nav">
-				<label>Genre:</label>
-					<div id="checkbox-style-left">
-				        <input type="checkbox" name="rock" value="rock"> Rock
-				        <input type="checkbox" name="pop" value="pop"> Pop
-				        <input type="checkbox" name="blues" value="blues"> Blues
-				    </div>
-				    <div id="checkbox-style-right">
-				        <input type="checkbox" name="classical" value="classical"> Classical
-				        <input type="checkbox" name="jazz" value="jazz"> Jazz
-				        <input type="checkbox" name="hiphop" value="hiphop"> Hip Hop
-				    </div>
-			</div>
-			<div class="clear-float">
-		    	<input type="submit" value="Filter">
-			</div>
-		</form>
+		<div id="side-nav">
+			<form method="post">
+				<div class="inner-side-nav">
+					<label for="song-length">Song length:</label>
+					<input type="range" name="song-length" min="0" max="10" step="1" value="5">
+				</div>
+				<div class="inner-side-nav">
+					<label for="artist">Artist:</label>
+					<select id="artist">
+						<option>Options</option>
+						<option>The Beatles</option>
+						<option>Michael Jackson</option>
+						<option>Tom Petty</option>
+						<option>Eagles</option>
+						<option>Pearl Jam</option>
+					</select>	
+				</div>
+				<div class="inner-side-nav">
+					<label for="album">Album:</label>
+					<select id="album">
+						<option>Options</option>
+						<option>Abbey Road</option>
+						<option>Thriller</option>
+						<option>Damn The Torpedos</option>
+						<option>Hotel California</option>
+						<option>Ten</option>
+					</select>
+				</div>
+				<div class="inner-side-nav">
+					<label>Genre:</label>
+						<div id="checkbox-style-left">
+							<ul>
+						        <li><input type="checkbox" name="rock" value="rock"> Rock</li>
+						        <li><input type="checkbox" name="pop" value="pop"> Pop</li>
+						        <li><input type="checkbox" name="blues" value="blues"> Blues</li>
+					    	</ul>
+					    </div>
+					    <div id="checkbox-style-right">
+					    	<ul>
+						        <li><input type="checkbox" name="classical" value="classical"> Classical</li>
+						        <li><input type="checkbox" name="jazz" value="jazz"> Jazz</li>
+						        <li><input type="checkbox" name="hiphop" value="hiphop"> Hip Hop</li>
+					    	</ul>
+					    </div>
+				</div>
+				<div class="clear-float">
+			    	<input type="submit" value="Filter" style="width: 100px;">
+				</div>
+			</form>
+		</div>
+
+	<!--____________________MAIN WINDOW___________________-->
+
+		<div id="main-window">
+			<h2>Something</h2>
+
+			<ul class="song-info">
+		        <li>The Beatles</li>
+		        <li class="song-info-border">Abbey Road</li>
+		        <li class="song-info-border">Pop</li>
+	      	</ul>
+
+			<h2>P.Y.T.</h2>
+
+			<ul class="song-info">
+		        <li>Michael Jackson</li>
+		        <li class="song-info-border">Thriller</li>
+		        <li class="song-info-border">Pop</li>
+	      	</ul>
+
+			<h2>Here Comes My Girl</h2>
+
+			<ul class="song-info">
+		        <li>Tom Petty</li>
+		        <li class="song-info-border">Damn The Torpedos</li>
+		        <li class="song-info-border">Rock</li>
+	      	</ul>
+
+			<h2>Hotel California</h2>
+
+			<ul class="song-info">
+		        <li>Eagles</li>
+		        <li class="song-info-border">Hotel California</li>
+		        <li class="song-info-border">Rock</li>
+	      	</ul>
+
+
+
+
+
+
+
+
+		</div>	
 	</div>
-
-
   </body>
 
  </html>

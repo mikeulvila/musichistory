@@ -1,3 +1,11 @@
+#body-div {
+  width: 965px;
+}
+
+
+
+/*------------HEADER---------------*/
+
 #main-header {
   width: 800px;
   margin: 30px 92px 0 92px;
@@ -40,7 +48,8 @@ ul#nav-bar li a {
   height: 371px;
   background-color: #4dd7fa;
   border: 2px solid black;
-  margin: 15px 15px 0 94px;
+  margin: 15px 15px 0 92px;
+  float: left;
 }
 
 label {
@@ -52,12 +61,10 @@ label {
 }
 
 #checkbox-style-left {
-  width: 65px;
   float: left;
 }
 
 #checkbox-style-right {
-  width: 80px;
   float: right;
 }
 
@@ -65,9 +72,55 @@ input[type="checkbox"] {
   display: inline-block;
 }
 
+input[type="submit"] {
+  margin: 34px 0 0 40px;
+}
+
 .clear-float {
   clear: both;
 }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/*----------------MAIN WINDOW----------------*/
+
+#main-window {
+  background-color: #fefac0;
+  width: 593px;
+  height: 372px;
+  border: 2px solid black;
+  float: right;
+  margin: 15px 70px 0 0;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #785616;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.song-info {
+  list-style-type: none;
+  margin: 0 0 0 25px;
+  padding: 0;
+  display: inline-block;
+}
+
+ul.song-info li {
+  text-align: center;
+  margin: 1px;
+  display: inline;
+  padding-left: 5px;
+}
+
+.song-info-border {
+  border-left: 2px solid black;
+}
+
 
 
 
