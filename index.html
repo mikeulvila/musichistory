@@ -17,11 +17,37 @@
 
 <!--_________SIDE NAV BAR___________________-->
 
-	<div #side-nav>
-		<form>
-			<label for="">Song length:</label>
-			<input type="range" name="song-length">
+	<div id="side-nav">
+		<form method="post">
+			<label for="song-length">Song length:</label>
+			<input type="range" name="song-length" min="0" max="10" step="1" value="5">
+			<label for="artist">Artist:</label>
+			<select id="artist">
+				<option>Option</option>
+				<option>The Beatles</option>
+				<option>Michael Jackson</option>
+				<option>Tom Petty</option>
+				<option>Eagles</option>
+				<option>Pearl Jam</option>
+			</select>	
+			<label for="album">Album:</label>
+			<select id="album">
+				<option>Option</option>
+				<option>Abbey Road</option>
+				<option>Thriller</option>
+				<option>Damn The Torpedos</option>
+				<option>Hotel California</option>
+				<option>Ten</option>
+			</select>
+			<label>Genre:</label>
+		        <input type="checkbox" name="rock" value="rock"> Rock
+		        <input type="checkbox" name="classical" value="classical"> Classical
+		        <input type="checkbox" name="pop" value="pop"> Pop
+		        <input type="checkbox" name="jazz" value="jazz"> Jazz
+		        <input type="checkbox" name="blues" value="blues"> Blues
+		        <input type="checkbox" name="hiphop" value="hiphop"> Hip Hop
 
+		    <input type="submit" value="Filter">
 
 
 		</form>
