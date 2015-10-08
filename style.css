@@ -1,0 +1,49 @@
+#main-header {
+  width: 80%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffb4b0;
+  border: 2px solid black;
+}
+
+#invisible-header {
+  width: 100%;
+  visibility: hidden;
+}
+
+#nav-bar {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+  margin: 20px 0 20px 15px;
+}
+
+ul#nav-bar li {
+  text-align: center;
+  margin: 1px;
+  display: inline;
+  padding-left: 5px;
+}
+
+ul#nav-bar li a {
+  text-decoration: none;
+  color: black;
+}
+
+.leftnavborder {
+  border-left: 2px solid black;
+}
+
+#side-nav {
+  background-color: #4dd7fa;
+
+}
+
+
+
+
+
+
+
+
