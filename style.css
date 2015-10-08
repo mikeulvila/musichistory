@@ -47,8 +47,27 @@ label {
   display: block;
 }
 
+.inner-side-nav {
+  padding: 17px 13px 0;
+}
 
+#checkbox-style-left {
+  width: 65px;
+  float: left;
+}
 
+#checkbox-style-right {
+  width: 80px;
+  float: right;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+.clear-float {
+  clear: both;
+}
 
 
 
