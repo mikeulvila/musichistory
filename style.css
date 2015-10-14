@@ -1,11 +1,8 @@
 #body-div {
   display: flex;
-  max-width: 965px;
+/*  max-width: 965px;*/
+/*  margin: 0 7px;*/
 }
-/*---------flex-spacer--------*/
-/*#flex-spacer {
-  flex: 5%;
-}*/
 
 /*------------HEADER---------------*/
 
@@ -23,6 +20,7 @@
 #invisible-header {
   width: 100%;
   visibility: hidden;
+  margin-bottom: 1px;
 }
 
 #nav-bar {
