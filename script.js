@@ -102,24 +102,6 @@ for (var i = 0; i < songs.length; i++) {
 }
 console.log(songs);
 
-// HTML ELEMENT VARIABLES DECLARED	
-// var mainWindow = document.getElementById("main-window"),
-// 	songTitle1 = document.getElementById("title1"),
-// 	songTitle2 = document.getElementById("title2"),
-// 	songTitle3 = document.getElementById("title3"),
-// 	songTitle4 = document.getElementById("title4"),
-// 	songTitle5 = document.getElementById("title5"),
-// 	songArtist1 = document.getElementById("artist1"),
-// 	songArtist2 = document.getElementById("artist2"),
-// 	songArtist3 = document.getElementById("artist3"),
-// 	songArtist4 = document.getElementById("artist4"),
-// 	songArtist5 = document.getElementById("artist5"),
-// 	songAlbum1 = document.getElementById("album1"),
-// 	songAlbum2 = document.getElementById("album2"),
-// 	songAlbum3 = document.getElementById("album3"),
-// 	songAlbum4 = document.getElementById("album4"),
-// 	songAlbum5 = document.getElementById("album5");
-
 // SEPERATE STRINGS TO TITLE, ARTIST, ALBUM
 var titles = [],
 	artists = [],
@@ -135,9 +117,10 @@ console.log(titles);
 console.log(artists);
 console.log(albums);
 
+var mainWindow = document.getElementById("main-window");
 var outputToDiv = "";
 for (var i = 0; i < titles.length; i++) {
-	outputToDiv += "<h2>{" + titles[i] + "} by {" + artists[i] + "} on the album {" + albums[i] + "}</h2>";
+	outputToDiv += "<p>{" + titles[i] + "} by {" + artists[i] + "} on the album {" + albums[i] + "}</p>";
 }
 
 mainWindow.innerHTML = outputToDiv;

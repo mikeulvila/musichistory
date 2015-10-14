@@ -1,6 +1,11 @@
 #body-div {
-  width: 965px;
+  display: flex;
+  max-width: 965px;
 }
+/*---------flex-spacer--------*/
+/*#flex-spacer {
+  flex: 5%;
+}*/
 
 /*------------HEADER---------------*/
 
@@ -45,12 +50,13 @@ ul#nav-bar li a:hover {
 /*------------SIDE NAV---------------*/
 
 #side-nav {
-  width: 186px;
-  height: 371px;
+  flex: 25%;
   background-color: #4dd7fa;
   border: 2px solid black;
-  margin: 15px 15px 0 92px;
-  float: left;
+  margin-right: 5px;
+/*  width: 186px;*/
+/*  height: 371px;*/
+  /*margin: 15px 15px 0 92px;*/
 }
 
 label {
@@ -89,16 +95,27 @@ ul {
 /*----------------MAIN WINDOW----------------*/
 
 #main-window {
+  flex: 70%;
   background-color: #fefac0;
-  width: 593px;
-  height: 372px;
   border: 2px solid black;
-  float: right;
-  margin: 15px 70px 0 0;
+/*  width: 593px;*/
+/*  height: 372px;*/
+/*  margin: 15px 70px 0 0;*/
 }
 
-h2 {
-  font-size: 1.2em;
+/*-------change odd and even bgc's----------*/
+div#main-window p:nth-child(2n+0) {
+  background-color: #fff5ee;
+}
+div#main-window p:nth-child(2n+1) {
+  background-color: #f5fffa;
+}
+div#main-window p:first-child {
+  font-weight: bolder;
+}
+
+p {
+  font-size: 1.1em;
   color: #785616;
   margin-left: 30px;
   margin-bottom: 10px;
