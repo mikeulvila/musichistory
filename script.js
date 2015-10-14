@@ -61,14 +61,14 @@
 
 // var containerText = el.innerHTML;
 
-/*
-  1. Take the contents of the sonnet div and place it in a variable
-  2. Find and output the starting position of the word "orphans"
-  3. Output the number of characters in the sonnet
-  4. Replace the first occurance of the string "winter" with "yuletide"
-  5. Replace all occurances of the string "the" with "a large"
-  6. Set the content of the sonnet div with the new string
-*/
+
+//  1. Take the contents of the sonnet div and place it in a variable
+  //2. Find and output the starting position of the word "orphans"
+  //3. Output the number of characters in the sonnet
+  //4. Replace the first occurance of the string "winter" with "yuletide"
+  //5. Replace all occurances of the string "the" with "a large"
+  //6. Set the content of the sonnet div with the new string
+
 
 // var sonnetEl = document.getElementById("sonnet");
 // var sonnetText = sonnetEl.innerHTML;
@@ -118,13 +118,25 @@ var mainWindow = document.getElementById("main-window"),
 	songAlbum2 = document.getElementById("album2"),
 	songAlbum3 = document.getElementById("album3"),
 	songAlbum4 = document.getElementById("album4"),
-	songAlbum5 = document.getElementById("album5"),
+	songAlbum5 = document.getElementById("album5");
+
+var titles = [],
+	artists = [],
+	albums = [];
+
+for (var i = 0; i < songs.length; i++) {
+	titles.push(songs[i].slice(0, songs[i].indexOf("-") -1));
+	artists.push(songs[i].slice(songs[i].indexOf("by") + 3, songs[i].indexOf(" on ")));
+	albums.push(songs[i].slice(songs[i].indexOf("album") + 6))
+}	
+
+console.log(titles);
+console.log(artists);
+console.log(albums);
 
 
 
 
-
-// songTitle1.innerHTML = songs[0].slice(0, songs[0].indexOf("-") -1);
 
 
 
