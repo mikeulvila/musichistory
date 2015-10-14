@@ -102,11 +102,29 @@ for (var i = 0; i < songs.length; i++) {
 }
 console.log(songs);
 
-// ADD EACH STRING TO DOM IN THE MAIN CONTENT WINDOW
-var mainWindow = document.getElementById("main-window");
-var songTitle1 = document.getElementById("title1");
+// HTML ELEMENT VARIABLES DECLARED	
+var mainWindow = document.getElementById("main-window"),
+	songTitle1 = document.getElementById("title1"),
+	songTitle2 = document.getElementById("title2"),
+	songTitle3 = document.getElementById("title3"),
+	songTitle4 = document.getElementById("title4"),
+	songTitle5 = document.getElementById("title5"),
+	songArtist1 = document.getElementById("artist1"),
+	songArtist2 = document.getElementById("artist2"),
+	songArtist3 = document.getElementById("artist3"),
+	songArtist4 = document.getElementById("artist4"),
+	songArtist5 = document.getElementById("artist5"),
+	songAlbum1 = document.getElementById("album1"),
+	songAlbum2 = document.getElementById("album2"),
+	songAlbum3 = document.getElementById("album3"),
+	songAlbum4 = document.getElementById("album4"),
+	songAlbum5 = document.getElementById("album5"),
 
-songTitle1.innerHTML = songs[0].slice(0, songs[0].indexOf("-") -1);
+
+
+
+
+// songTitle1.innerHTML = songs[0].slice(0, songs[0].indexOf("-") -1);
 
 
 
