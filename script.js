@@ -80,7 +80,7 @@
 // console.log(sonnetText.length);
 
 // sonnetEl.innerHTML = sonnetText.replace("winter", "yuletide").replace(/the/g, "a large");
-//NEW SONGS JAVASCRIPT FILE//
+//NEW SONGS JAVASCRIPT FILE
 
 var songs = [];
 
@@ -94,30 +94,63 @@ songs.unshift("P.Y.T. > by Michael Jackson on the album Thriller");
 
 //  REMOVE BAD CHARACTERS
 for (var i = 0; i < songs.length; i++) {
-	switch (true) {
-		case (songs[i].indexOf("*") !== -1):
-			songs[i] = songs[i].replace("*", "");
-			break;
-		case (songs[i].indexOf("@") !== -1):
-			songs[i] = songs[i].replace("@", "");
-			break;
-		case (songs[i].indexOf("(") !== -1):
-			songs[i] = songs[i].replace("(", "");
-			break;
-		case (songs[i].indexOf("!") !== -1):
-			songs[i] = songs[i].replace("!", "");
-			break;
-	}
-}
-console.log(songs);
-
-//  REPLACE > WITH - 
-for (var i = 0; i < songs.length; i++) {
+	songs[i] = songs[i].replace("*", "");
+	songs[i] = songs[i].replace("@", "");
+	songs[i] = songs[i].replace("(", "");
+	songs[i] = songs[i].replace("!", "");
 	songs[i] = songs[i].replace(">", "-");
 }
 console.log(songs);
 
 // ADD EACH STRING TO DOM IN THE MAIN CONTENT WINDOW
+var mainWindow = document.getElementById("main-window");
+var songTitle1 = document.getElementById("title1");
+
+songTitle1.innerHTML = songs[0].slice(0, songs[0].indexOf("-") -1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
