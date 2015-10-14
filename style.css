@@ -10,10 +10,14 @@
 /*------------HEADER---------------*/
 
 #main-header {
-  width: 800px;
-  margin: 30px 92px 0 92px;
+  position: fixed;
+  width: 100%;
+/*  margin: 30px 92px 0 92px;*/
+  top: 0;
+  left: 0;
   background-color: #ffb4b0;
   border: 2px solid black;
+  box-sizing: border-box;
 }
 
 #invisible-header {
@@ -53,7 +57,7 @@ ul#nav-bar li a:hover {
   flex: 25%;
   background-color: #4dd7fa;
   border: 2px solid black;
-  margin-right: 5px;
+  margin-right: 7px;
 /*  width: 186px;*/
 /*  height: 371px;*/
   /*margin: 15px 15px 0 92px;*/
