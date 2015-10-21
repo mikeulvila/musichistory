@@ -8,11 +8,15 @@
 
   <body>
 	  	<header id="main-header">
-	      <ul id="nav-bar">
-	        <li id="list-music"><a href="#">List Music</a></li>
-	        <li id="add-music" class="leftnavborder"><a href="#">Add Music</a></li>
-	        <li class="leftnavborder"><a href="#">Profile</a></li>
-	      </ul>
+	  	  	<div id="top-header">
+	  	  	</div>
+	  	  	<div id="bottom-header">
+		      <ul id="nav-bar">
+		        <li><a href="#">Home</a></li>
+		        <li id="list-music" class="leftnavborder"><a href="#">List Music</a></li>
+		        <li id="add-music" class="leftnavborder"><a href="#">Add Music</a></li>
+		      </ul>
+
 	    </header>
 	    <header id="invisible-header">
 	      <ul id="nav-bar">
@@ -22,6 +26,13 @@
 	      </ul>
 	    </header>
 
+		<ul id="enter-song-info" class="hidden">
+	      	<li id="song-info-header">Enter song info:</li>
+	      	<li>Title:  <input type="text" id="song-title" size="25" placeholder="Enter title here"></li>
+	      	<li>Artist:  <input type="text" id="song-artist" size="25" placeholder="Enter artist here"></li>
+	      	<li>Album:  <input type="text" id="song-album" size="25" placeholder="Enter album here"></li>
+	      	<li><button id="add">Add</button></li>
+        </ul>
 	<!--_________SIDE NAV BAR___________________-->
 
   	<div id="body-div">
@@ -77,51 +88,43 @@
 		</div>
 
 	<!--____________________MAIN WINDOW___________________-->
-		<div id="main-container">
-			<ul id="enter-song-info" class="hidden">
-		      	<li id="song-info-header">Enter song info:</li>
-		      	<li>Title:  <input type="text" id="song-title" size="35" placeholder="Enter song title here"></li>
-		      	<li>Artist:  <input type="text" id="song-artist" size="35" placeholder="Enter name of the artist here"></li>
-		      	<li>Album:  <input type="text" id="song-album" size="35" placeholder="Enter name of the album here"></li>
-		      	<li><button id="add">Add</button></li>
-	        </ul>
-			<div id="main-window">
-				<h2>Something</h2>
-				<ul class="song-info">
-			        <li>The Beatles</li>
-			        <li class="song-info-border">Abbey Road</li>
-			        <li class="song-info-border">Pop</li>
-		      	</ul>
+		
+		<div id="main-window">
+			<h2>Something</h2>
+			<ul class="song-info">
+		        <li>The Beatles</li>
+		        <li class="song-info-border">Abbey Road</li>
+		        <li class="song-info-border">Pop</li>
+	      	</ul>
 
-				<h2>P.Y.T.</h2>
-				<ul class="song-info">
-			        <li>Michael Jackson</li>
-			        <li class="song-info-border">Thriller</li>
-			        <li class="song-info-border">Pop</li>
-		      	</ul>
+			<h2>P.Y.T.</h2>
+			<ul class="song-info">
+		        <li>Michael Jackson</li>
+		        <li class="song-info-border">Thriller</li>
+		        <li class="song-info-border">Pop</li>
+	      	</ul>
 
-				<h2>Here Comes My Girl</h2>
-				<ul class="song-info">
-			        <li>Tom Petty</li>
-			        <li class="song-info-border">Damn The Torpedos</li>
-			        <li class="song-info-border">Rock</li>
-		      	</ul>
+			<h2>Here Comes My Girl</h2>
+			<ul class="song-info">
+		        <li>Tom Petty</li>
+		        <li class="song-info-border">Damn The Torpedos</li>
+		        <li class="song-info-border">Rock</li>
+	      	</ul>
 
-				<h2>Hotel California</h2>
-				<ul class="song-info">
-			        <li>Eagles</li>
-			        <li class="song-info-border">Hotel California</li>
-			        <li class="song-info-border">Rock</li>
-		      	</ul>
+			<h2>Hotel California</h2>
+			<ul class="song-info">
+		        <li>Eagles</li>
+		        <li class="song-info-border">Hotel California</li>
+		        <li class="song-info-border">Rock</li>
+	      	</ul>
 
-		      	<h2>Hotel California</h2>
-				<ul class="song-info">
-			        <li>Eagles</li>
-			        <li class="song-info-border">Hotel California</li>
-			        <li class="song-info-border">Rock</li>
-		      	</ul>
-			</div>	
-		</div>
+	      	<h2>Hotel California</h2>
+			<ul class="song-info">
+		        <li>Eagles</li>
+		        <li class="song-info-border">Hotel California</li>
+		        <li class="song-info-border">Rock</li>
+	      	</ul>
+		</div>	
 	</div>
 	<script type="text/javascript" src="script.js"></script>
   </body>

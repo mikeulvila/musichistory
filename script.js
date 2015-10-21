@@ -82,7 +82,25 @@
 // sonnetEl.innerHTML = sonnetText.replace("winter", "yuletide").replace(/the/g, "a large");
 //NEW SONGS JAVASCRIPT FILE
 
+//***************DISPLAY AND HIDE LIST MUSIC AND ADD MUSIC********************
+document.getElementById("list-music").addEventListener("click", function(){
+	document.getElementById("main-window").classList.remove("hidden");
+	document.getElementById("side-nav").classList.remove("hidden");
+	document.getElementById("enter-song-info").classList.add("hidden");	
+	console.log("list music works");
+})
+document.getElementById("add-music").addEventListener("click", function(){
+	document.getElementById("main-window").classList.add("hidden");
+	document.getElementById("side-nav").classList.add("hidden");
+	document.getElementById("enter-song-info").classList.remove("hidden");
+	console.log("add music works");
+})
+
+//*************DECLARE VARIABLES******************************
 var songs = [];
+var titles = [],
+	artists = [],
+	albums = [];
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
@@ -103,9 +121,6 @@ for (var i = 0; i < songs.length; i++) {
 console.log(songs);
 
 // SEPERATE STRINGS TO TITLE, ARTIST, ALBUM
-var titles = [],
-	artists = [],
-	albums = [];
 
 for (var i = 0; i < songs.length; i++) {
 	titles.push(songs[i].slice(0, songs[i].indexOf("-") -1));
@@ -113,28 +128,36 @@ for (var i = 0; i < songs.length; i++) {
 	albums.push(songs[i].slice(songs[i].indexOf("album") + 6))
 }	
 
-console.log(titles);
-console.log(artists);
-console.log(albums);
+console.log("titles", titles);
+console.log("artists", artists);
+console.log("albums", albums);
 
 var mainWindow = document.getElementById("main-window");
 var outputToDiv = "";
+
 for (var i = 0; i < titles.length; i++) {
 	outputToDiv += "<p>{" + titles[i] + "} by {" + artists[i] + "} on the album {" + albums[i] + "}</p>";
-}
+    }
 
 mainWindow.innerHTML = outputToDiv;
 
-//***************DISPLAY AND HIDE LIST MUSIC AND ADD MUSIC********************
-document.getElementById("list-music").addEventListener("click", function(){
-	console.log("list music works");
+//******************ADD MUSIC************************
+document.getElementById("add").addEventListener("click", function(){
+	console.log("add button works");
+	titles.push(document.getElementById("song-title").value);
+	artists.push(document.getElementById("song-artist").value);
+	albums.push(document.getElementById("song-album").value);
+	console.log(titles);
+	console.log(artists);
+	console.log(albums);
+	mainWindow.innerHTML += "<p>{" + titles[titles.length - 1] + "} by {" + artists[artists.length - 1] + "} on the album {" + albums[albums.length - 1] + "}</p>";
+	document.getElementById("main-window").classList.remove("hidden");
+	document.getElementById("side-nav").classList.remove("hidden");
+	document.getElementById("enter-song-info").classList.add("hidden");
+	document.getElementById("song-title").value = "";
+	document.getElementById("song-artist").value = "";
+	document.getElementById("song-album").value = "";
 })
-document.getElementById("add-music").addEventListener("click", function(){
-	document.getElementById("main-window").classList.add("hidden");
-	document.getElementById("enter-song-info").classList.remove("hidden");
-	console.log("add music works");
-})
-
 
 
 
