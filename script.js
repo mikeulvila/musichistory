@@ -125,6 +125,17 @@ for (var i = 0; i < titles.length; i++) {
 
 mainWindow.innerHTML = outputToDiv;
 
+//***************DISPLAY AND HIDE LIST MUSIC AND ADD MUSIC********************
+document.getElementById("list-music").addEventListener("click", function(){
+	console.log("list music works");
+})
+document.getElementById("add-music").addEventListener("click", function(){
+	document.getElementById("main-window").classList.add("hidden");
+	document.getElementById("enter-song-info").classList.remove("hidden");
+	console.log("add music works");
+})
+
+
 
 
 
