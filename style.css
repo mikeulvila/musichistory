@@ -9,45 +9,72 @@
 #main-header {
   position: fixed;
   width: 100%;
+  background: radial-gradient(#fff, #007497);
 /*  margin: 30px 92px 0 92px;*/
   top: 0;
   left: 0;
-  background-color: #ffb4b0;
-  border: 2px solid black;
   box-sizing: border-box;
 }
 
 #invisible-header {
   width: 100%;
-  height: 60px;
+  height: 200px;
   visibility: hidden;
   margin-bottom: 1px;
 }
-
-#nav-bar {
-  list-style-type: none;
-  padding: 0;
-  display: inline-block;
-  margin: 20px 0 20px 20px;
+#logo {
+  font-size: 1.9em;
+  font-family: Lobster, cursive;
+  color: #fff;
+  float: left;
+}
+#logo h1 {
+  margin-bottom: 15px;
+  margin-left: 15px;
+  text-shadow: 2px 2px 2px black;
+}
+#discription {
+  font-size: 1.2em;
+  font-family: Lobster, cursive;
+  color: #fff;
+  float: right;
+  margin-top: 60px;
+  margin-right: 15px;
+}
+#discription h3 {
+  font-weight: normal;
+  text-shadow: 1px 1px 1px black;
+}
+#bottom-header {
+  background: #213B4C;
 }
 
-ul#nav-bar li {
+#nav-list {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  width: 300px;
+  margin: 20px auto;
+}
+
+ul#nav-list li {
   text-align: center;
   margin: 1px;
   display: inline;
   padding-left: 5px;
 }
 
-ul#nav-bar li a {
+ul#nav-list li a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
-ul#nav-bar li a:hover {
+ul#nav-list li a:hover {
   text-decoration: underline;
 }
 
 .leftnavborder {
-  border-left: 2px solid black;
+  border-left: 2px solid #fff;
 }
 /************SONG INFO************/
 #enter-song-info {
