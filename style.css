@@ -48,6 +48,9 @@
 #bottom-header {
   background: #213B4C;
 }
+#nav-bar {
+  text-align: center;
+}
 
 #nav-list {
   list-style-type: none;
@@ -78,15 +81,21 @@ ul#nav-list li a:hover {
 }
 /************SONG INFO************/
 #enter-song-info {
-  border: 1px solid black;
-  margin: 5px;
+  width: 25%;
+  background: #213B4C;
+  color: #fff;
+  margin: 5px auto;
   padding: 5px;
 }
 #enter-song-info li {
-  display: inline-block;
+  margin: 20px 0;
+}
+#enter-song-info li:last-child {
+  text-align: center;
 }
 
 #song-info-header {
+  text-align: center;
   font-weight: bold;
   font-size: 1.1em;
   text-decoration: underline;
