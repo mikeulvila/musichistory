@@ -86,11 +86,13 @@ ul#nav-list li a:hover {
   color: #fff;
   margin: 5px auto;
   padding: 5px;
+  border-radius: 20px;
 }
 #enter-song-info li {
-  margin: 20px 0;
+  margin: 10px 0 10px 15px;
 }
 #enter-song-info li:last-child {
+  margin: 25px;
   text-align: center;
 }
 
@@ -103,6 +105,17 @@ ul#nav-list li a:hover {
 }
 .hidden {
   display: none;
+}
+#add {
+  width: 75px;
+  border: none;
+  color: #fff;
+  background: radial-gradient(#fff 5%, #007497);
+  text-shadow: 2px 2px 1px black;
+  transition: font-size .2s;
+}
+#add:hover {
+  font-size: 1.3em;
 }
 
 /*------------SIDE NAV---------------*/

@@ -81,20 +81,21 @@
 
 // sonnetEl.innerHTML = sonnetText.replace("winter", "yuletide").replace(/the/g, "a large");
 //NEW SONGS JAVASCRIPT FILE
-
+$(document).ready(function() {
 //***************DISPLAY AND HIDE LIST MUSIC AND ADD MUSIC********************
-document.getElementById("list-music").addEventListener("click", function(){
-	document.getElementById("main-window").classList.remove("hidden");
-	document.getElementById("side-nav").classList.remove("hidden");
-	document.getElementById("enter-song-info").classList.add("hidden");	
+	$("#list-music").click(function(){
+		$("#main-window").show();
+		$("#side-nav").show();	
+		$("#enter-song-info").hide();
 	console.log("list music works");
-})
-document.getElementById("add-music").addEventListener("click", function(){
-	document.getElementById("main-window").classList.add("hidden");
-	document.getElementById("side-nav").classList.add("hidden");
-	document.getElementById("enter-song-info").classList.remove("hidden");
+	});
+
+	$("#add-music").click(function() {
+		$("#main-window").hide();
+		$("#side-nav").hide();	
+		$("#enter-song-info").show();
 	console.log("add music works");
-})
+});
 
 //*************DECLARE VARIABLES******************************
 var songs = [];
@@ -132,32 +133,33 @@ console.log("titles", titles);
 console.log("artists", artists);
 console.log("albums", albums);
 
-var mainWindow = document.getElementById("main-window");
+var mainWindow = $("#main-window");
 var outputToDiv = "";
 
 for (var i = 0; i < titles.length; i++) {
 	outputToDiv += "<p>{" + titles[i] + "} by {" + artists[i] + "} on the album {" + albums[i] + "}</p>";
     }
 
-mainWindow.innerHTML = outputToDiv;
+mainWindow.html(outputToDiv);
 
 //******************ADD MUSIC************************
-document.getElementById("add").addEventListener("click", function(){
+$("#add").click(function() {
 	console.log("add button works");
-	titles.push(document.getElementById("song-title").value);
-	artists.push(document.getElementById("song-artist").value);
-	albums.push(document.getElementById("song-album").value);
+	titles.push($("#song-title").val());
+	artists.push($("#song-artist").val());
+	albums.push($("#song-album").val());
 	console.log(titles);
 	console.log(artists);
 	console.log(albums);
-	mainWindow.innerHTML += "<p>{" + titles[titles.length - 1] + "} by {" + artists[artists.length - 1] + "} on the album {" + albums[albums.length - 1] + "}</p>";
-	document.getElementById("main-window").classList.remove("hidden");
-	document.getElementById("side-nav").classList.remove("hidden");
-	document.getElementById("enter-song-info").classList.add("hidden");
-	document.getElementById("song-title").value = "";
-	document.getElementById("song-artist").value = "";
-	document.getElementById("song-album").value = "";
+	mainWindow.append("<p>{" + titles[titles.length - 1] + "} by {" + artists[artists.length - 1] + "} on the album {" + albums[albums.length - 1] + "}</p>");
+	$("#main-window").show();
+	$("#side-nav").show();
+	$("#enter-song-info").hide();
+	$("#song-title").val("");
+	$("#song-artist").val("");
+	$("#song-album").val("");
 })
+});
 
 
 
