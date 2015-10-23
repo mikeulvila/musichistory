@@ -1,0 +1,24 @@
+{
+  "songs": [
+    {
+      "title": "Something",
+      "artist": "The Beatles",
+      "album": "Abbey Road"
+    },
+    {
+      "title": "P.Y.T.",
+      "artist": "Michael Jackson",
+      "album": "Thriller"      
+    },
+    {
+      "title": "Here Comes My Girl",
+      "artist": "Tom Petty & The Heartbreakers",
+      "album": "Damn The Torpedos"      
+    },
+    {
+      "title": "Hotel California",
+      "artist": "Eagles",
+      "ablum": "Hotel California"
+    }
+  ]
+}

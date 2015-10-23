@@ -1,0 +1,24 @@
+{
+  "songs": [
+    {
+      "title": "Between Me And You",
+      "artist": "Brandon Flowers",
+      "album": "The Desired Effect"
+    },
+    {
+      "title": "What Are You Listening To?",
+      "artist": "Chris Stapleton",
+      "album": "What Are You Listening To?"      
+    },
+    {
+      "title": "What Would You Say",
+      "artist": "Dave Matthews Band",
+      "album": "Under The Table And Dreaming"      
+    },
+    {
+      "title": "Stop This Train",
+      "artist": "John Mayer",
+      "ablum": "Continuum"
+    }
+  ]
+}
