@@ -1,34 +1,18 @@
 
 $(document).ready(function() {
-var mainWindow = $("#song-list-container");
-	$.ajax({
-	    url: "data/songs.json"
-	  	}).done(function(jsonObj) {
-	    console.log("the contents of songs.json");
-	    console.log(jsonObj);
-	    var songs = jsonObj.songs;
-	    console.log(songs);
-	    //loop over object and append string to DOM with delete button
-	    for (var i = 0; i < songs.length; i++) {
+
+	var mainWindow = $("#song-list-container");
+	function getSongInfo(songInfo) {
+		var songs = songInfo.songs;
+		for (var i = 0; i < songs.length; i++) {
 	    	mainWindow.append("<div id='song-container'><h2>" + songs[i].title + "</h2><ul class='song-info'><li>" + songs[i].artist + " </li><li class='song-info-border'>" + songs[i].album + "</li></ul><button class='delete-button'>Delete</button></div>");
 	    };
-  	});
+	}
+	$.ajax({url: "data/songs.json"}).done(getSongInfo); 
 //*****************ADD MORE SONGS WITH MORE BUTTON***************************
 	$("#more-button").click(function(){
-		console.log("more button works");
-		$.ajax({
-	    url: "data/more-songs.json"
-	  	}).done(function(jsonObj) {
-	    console.log("the contents of songs.json");
-	    console.log(jsonObj);
-	    var songs = jsonObj.songs;
-	    console.log(songs);
-	    //loop over object and append string to DOM with delete button
-		    for (var i = 0; i < songs.length; i++) {
-		    	mainWindow.append("<div id='song-container'><h2>" + songs[i].title + "</h2><ul class='song-info'><li>" + songs[i].artist + " </li><li class='song-info-border'>" + songs[i].album + "</li></ul><button class='delete-button'>Delete</button></div>");
-		    };
-  		});
-	  });
+		$.ajax({url: "data/more-songs.json"}).done(getSongInfo);
+	});
 //***************DISPLAY AND HIDE LIST MUSIC AND ADD MUSIC********************
 	$("#list-music").click(function(){
 		$("#main-window").show();
@@ -42,7 +26,7 @@ var mainWindow = $("#song-list-container");
 		$("#side-nav").hide();	
 		$("#enter-song-info").show();
 	console.log("add music works");
-});
+	});
 
 //*************DECLARE VARIABLES******************************
 var titles = [],
