@@ -1,17 +1,26 @@
 
-define(["jquery"], function($) {
-	$("#enter-song-info").hide();
-	var mainWindow = $("#song-list-container");
-	function getSongInfo(songInfo) {
-		var songs = songInfo.songs;
-		for (var i = 0; i < songs.length; i++) {
-	    	mainWindow.append("<div id='song-container'><h2>" + songs[i].title + "</h2><ul class='song-info'><li>" + songs[i].artist + " </li><li class='song-info-border'>" + songs[i].album + "</li></ul><button class='delete-button'>Delete</button></div>");
-	    }
-	}
-	$.ajax({url: "data/songs.json"}).done(getSongInfo); 
+define(
+	["jquery", "populate-songs", "get-more-songs"],
+	function($, populate, getMore) {
+		
+		$("#enter-song-info").hide();
+		
+		var mainWindow = $("#song-list-container");
+		
+		var getSongInfo = function (songInfo) {
+			var songs = songInfo.songs;
+			for (var i = 0; i < songs.length; i++) {
+		    	mainWindow.append("<div id='song-container'><h2>" + songs[i].title + "</h2><ul class='song-info'><li>" + songs[i].artist + " </li><li class='song-info-border'>" + songs[i].album + "</li></ul><button class='delete-button'>Delete</button></div>");
+		    }
+		};
+
+		populate.getJsonData(getSongInfo);
+
+
+	// $.ajax({url: "data/songs.json"}).done(getSongInfo); 
 //*****************ADD MORE SONGS WITH MORE BUTTON***************************
 	$("#more-button").click(function(){
-		$.ajax({url: "data/more-songs.json"}).done(getSongInfo);
+		getMore.getJsonData(getSongInfo);
 	});
 //***************DISPLAY AND HIDE LIST MUSIC AND ADD MUSIC********************
 	$("#list-music").click(function(){

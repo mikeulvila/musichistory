@@ -5,7 +5,7 @@
     <title>Music History Project</title>
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
 
   <body>
@@ -29,7 +29,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Home</a></li>
         <li><a id="list-music" href="#">Playlist</a></li>
-        <li><a id="add-music" href="#">Add Music</a></li>
+        <li><a id="add-music" href="#" data-toggle="modal" data-target="#myModal">Add Music</a></li>
         
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -65,6 +65,7 @@
 <!-- ****************ADD MUSIC FEATURE************************ -->
   	<div id="body-div">
   	  <div id="body-container">
+  	  	<div id="myModal" class="modal fade" role="dialog">
 	    <div id="form-container">    
 			<ul id="enter-song-info">
 		      	<li id="song-info-header">Enter song info:</li>
@@ -76,6 +77,7 @@
 		      	<li><input type="text" id="song-album" size="25" placeholder="Enter album here"></li> 	
 		      	<li><button id="add"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Add</button></li>
 	        </ul>
+    	</div>
     	</div>
 	<!--_________SIDE NAV BAR___________________-->
 		<div class="container-fluid">
