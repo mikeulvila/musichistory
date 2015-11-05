@@ -72,14 +72,13 @@ ul#nav-list li a:hover {
 
 /************SONG INFO************/
 #enter-song-info {
-  width: 25%;
+  width: 250px;
   background: #ecf0f1;
   color: black;
-  margin: 5px auto;
+  margin: 150px auto;
   padding: 5px;
   border-radius: 20px;
-  box-shadow: inset 0 0 5px #0d1723;
-  transition: all 1s ease-in-out; }
+  box-shadow: inset 0 0 5px #0d1723; }
 
 #enter-song-info li {
   margin: 10px 0 10px 15px; }
@@ -113,13 +112,10 @@ ul#nav-list li a:hover {
 /*------------SIDE NAV---------------*/
 #side-nav {
   z-index: 2;
-  min-width: 200px;
   opacity: .9;
-  width: 200px;
+  margin-left: 15px;
   background: #ecf0f1;
   color: black;
-  margin: 15px 25px 0 50px;
-  padding: 5px;
   border-radius: 20px;
   box-shadow: inset 0 0 8px #0d1723; }
 
@@ -154,11 +150,8 @@ ul {
   z-index: 2;
   min-width: 500px;
   opacity: .9;
-  width: 60%;
   background: #ecf0f1;
   color: black;
-  margin: 15px 0 0 25px;
-  padding: 5px;
   border-radius: 20px;
   box-shadow: inset 0 0 8px #0d1723; }
 

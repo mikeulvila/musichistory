@@ -13,8 +13,8 @@ requirejs.config({
 });
 
 require(
-	["jquery", "bootstrap", "script", "populate-songs", "get-more-songs"],
-	function($, bootstrap, script, populate, getMore) {
+	["bootstrap", "script", "addmusic"],
+	function(bootstrap, script, addMusic) {
 
 	}
 );
