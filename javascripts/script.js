@@ -1,20 +1,27 @@
 
 define(
-	["jquery", "populate-songs", "get-more-songs"],
-	function($, populate, getMore) {
+	["jquery", "hbs", "populate-songs", "get-more-songs"],
+	function($, hbs, populate, getMore) {
 		
 		$("#enter-song-info").hide();
 		
 		var mainWindow = $("#song-list-container");
 		
 		var getSongInfo = function (songInfo) {
-			var songs = songInfo.songs;
-			for (var i = 0; i < songs.length; i++) {
-		    	mainWindow.append("<div id='song-container'><h2>" + songs[i].title + "</h2><ul class='song-info'><li>" + songs[i].artist + " </li><li class='song-info-border'>" + songs[i].album + "</li></ul><button class='delete-button'>Delete</button></div>");
-		    }
+			require(['hbs!../templates/songs'], function(songTemplate) {
+				mainWindow.append(songTemplate(songInfo));
+			});
+			// for (var i = 0; i < songs.length; i++) {
+		 //    	mainWindow.append("<div id='song-container'><h2>" + songs[i].title + "</h2><ul class='song-info'><li>" + songs[i].artist + " </li><li class='song-info-border'>" + songs[i].album + "</li></ul><button class='delete-button'>Delete</button></div>");
+		 //    }
 		};
 
+
 		populate.getJsonData(getSongInfo);
+		// require(['hbs!../templates/songs'], function(songTemplate) {
+		// 	$("#main-window").html(songTemplate(songs));
+		// 	})
+	
 
 
 	// $.ajax({url: "data/songs.json"}).done(getSongInfo); 
