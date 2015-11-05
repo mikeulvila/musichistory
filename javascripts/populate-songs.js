@@ -2,9 +2,8 @@ define(["jquery"], function($) {
 	return {
 		getJsonData: function(doWorkFunc) {
 			$.ajax({url: "data/songs.json"})
-				.done(function(jsonPopulateData) {
-					doWorkFunc(jsonPopulateData);
-				});
+				.done(doWorkFunc); 
+				
   	  	}
 	};
 
