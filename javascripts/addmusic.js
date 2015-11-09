@@ -20,8 +20,11 @@ define(
 			
 			console.log($("#song-title").val());
 			console.log("song", inputSong);
-			require(['hbs!../templates/songs'], function(songTemplate) {
+			require(['hbs!../templates/songs', 'hbs!../templates/artist_select', 'hbs!../templates/album_select'], 
+				function(songTemplate, artistSelectTemplate, albumSelectTemplate) {
 				script.mainWindow.append(songTemplate(inputSong));
+				$("#artist-select").append(artistSelectTemplate(inputSong));
+				$("#album-select").append(albumSelectTemplate(inputSong));
 			});
 			//***********OLD CODE*******************
 			// titles.push($("#song-title").val());

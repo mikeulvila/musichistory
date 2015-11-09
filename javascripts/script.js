@@ -6,10 +6,15 @@ define(
 		$("#enter-song-info").hide();
 		
 		var mainWindow = $("#song-list-container");
-		
+		var artistSelect = $("#artist-select");
+		var albumSelect = $("#album-select");
 		var getSongInfo = function (songInfo) {
-			require(['hbs!../templates/songs'], function(songTemplate) {
+			require(['hbs!../templates/songs', 'hbs!../templates/artist_select', 'hbs!../templates/album_select'], 
+				function(songTemplate, artistSelectTemplate, albumSelectTemplate) {
 				mainWindow.append(songTemplate(songInfo));
+				artistSelect.append(artistSelectTemplate(songInfo));
+				albumSelect.append(albumSelectTemplate(songInfo));
+
 			});
 			// for (var i = 0; i < songs.length; i++) {
 		 //    	mainWindow.append("<div id='song-container'><h2>" + songs[i].title + "</h2><ul class='song-info'><li>" + songs[i].artist + " </li><li class='song-info-border'>" + songs[i].album + "</li></ul><button class='delete-button'>Delete</button></div>");
