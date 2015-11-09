@@ -11,9 +11,9 @@ define(
 		var getSongInfo = function (songInfo) {
 			require(['hbs!../templates/songs', 'hbs!../templates/artist_select', 'hbs!../templates/album_select'], 
 				function(songTemplate, artistSelectTemplate, albumSelectTemplate) {
-				mainWindow.append(songTemplate(songInfo));
-				artistSelect.append(artistSelectTemplate(songInfo));
-				albumSelect.append(albumSelectTemplate(songInfo));
+				mainWindow.html(songTemplate(songInfo));
+				artistSelect.html(artistSelectTemplate(songInfo));
+				albumSelect.html(albumSelectTemplate(songInfo));
 
 			});
 			// for (var i = 0; i < songs.length; i++) {
@@ -31,9 +31,9 @@ define(
 
 	// $.ajax({url: "data/songs.json"}).done(getSongInfo); 
 //*****************ADD MORE SONGS WITH MORE BUTTON***************************
-	$("#more-button").click(function(){
-		getMore.getJsonData(getSongInfo);
-	});
+	// $("#more-button").click(function(){
+	// 	getMore.getJsonData(getSongInfo);
+	// });
 //***************DISPLAY AND HIDE LIST MUSIC AND ADD MUSIC********************
 	$("#list-music").click(function(){
 		$("#main-window").show();
@@ -79,7 +79,10 @@ define(
 	});
 	//*********RETURN DOM VARIABLES
 	return {
-		mainWindow: mainWindow
+		mainWindow: mainWindow,
+		artistSelect: artistSelect,
+		albumSelect: albumSelect,
+		getSongInfo: getSongInfo
 	};
 
 });

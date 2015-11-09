@@ -1,0 +1,44 @@
+{
+  "songs": {
+    "something": {
+      "title": "Something", 
+      "artist": "The Beatles",
+      "album": "Abbey Road"
+    },
+    "pyt": {
+      "title": "P.Y.T.", 
+      "artist": "Michael Jackson",
+      "album": "Thriller"
+    },
+    "herecomesmygirl": {
+      "title": "Here Comes My Girl", 
+      "artist": "Tom Petty & The Hearbreakers",
+      "album": "Damn The Torpedos"
+    },
+    "hotel": {
+      "title": "Hotel California", 
+      "artist": "Eagles",
+      "album": "Hotel California"
+    },
+    "between": {
+      "title": "Between Me And You", 
+      "artist": "Brandon Flowers",
+      "album": "The Desired Effect"
+    },
+    "listeningto": {
+      "title": "What Are You Listening To?", 
+      "artist": "Chris Stapleton",
+      "album": "What Are You Listening To"
+    },
+    "wouldyou": {
+      "title": "What Would You Say", 
+      "artist": "Dave Matthews Band",
+      "album": "Under The Table And Dreaming"
+    },
+    "stopthistrain": {
+      "title": "Stop This Train", 
+      "artist": "John Mayer",
+      "album": "Continuum"
+    }
+  }
+}
