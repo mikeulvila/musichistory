@@ -1,13 +1,13 @@
 define(
-	["jquery"],
-	function($) {
+	["jquery", "script"],
+	function($, script) {
 	// *************FILTER ARTISTS***********************
 	$("#artist-select").change(function(e) {
 		var filteredArtist = $("#artist-select option:selected").text();
-		// console.log("selected artist", filteredArtist);
+		console.log("selected artist", filteredArtist);
 		$(".song-container").show();
 		$(".song-artist").each(function() {
-			// console.log("THIS", $(this).text().length, filteredArtist.length);
+			console.log("THIS", $(this).text().length, filteredArtist.length);
 			if ($(this).text() === filteredArtist) {
 				$(this).parents(".song-container").show();
 			} else {
@@ -29,4 +29,4 @@ define(
 	$("#clear-filter").click(function() {
 		$(".song-container").show();
 	});
-}); 
+});
