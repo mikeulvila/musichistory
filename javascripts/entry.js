@@ -14,8 +14,8 @@ requirejs.config({
 });
 
 require(
-	["bootstrap", "script", "addmusic", "add_song_firebase", "filter"],
-	function(bootstrap, script, addMusic, addFirebase, filter) {
+	["bootstrap", "script", "addmusic", "add_song_firebase"],
+	function(bootstrap, script, addMusic, addFirebase) {
 
 	}
 );
