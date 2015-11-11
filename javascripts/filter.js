@@ -7,11 +7,12 @@ define(
 		console.log("selected artist", filteredArtist);
 		$(".song-container").show();
 		$(".song-artist").each(function() {
-			console.log("THIS", $(this).text().length, filteredArtist.length);
-			if ($(this).text() === filteredArtist) {
+			// console.log("THIS", $(this).text().length, filteredArtist.length);
+			if (filteredArtist === "-Select Artist-") {
+				
+			} else if ($(this).text() === filteredArtist) {
 				$(this).parents(".song-container").show();
 			} else {
-				console.log("hiding");
 				$(this).parents(".song-container").hide();
 			}
 		});
@@ -22,7 +23,15 @@ define(
 		var filteredAlbum = $("#album-select option:selected").text();
 		console.log("selected album", filteredAlbum);
 		$(".song-container").show();
-		$(".song-container").not(':contains("' + filteredAlbum + '")').hide();
+		$(".song-album").each(function() {
+			if (filteredAlbum === "-Select Album-") {
+				
+			} else if ($(this).text() === filteredAlbum) {
+				$(this).parents(".song-container").show();
+			} else {
+				$(this).parents(".song-container").hide();
+			}
+		});
 	});
 
 	//************* CLEAR FILTER *******************
