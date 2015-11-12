@@ -12,6 +12,8 @@ define(
 				
 			} else if ($(this).text() === filteredArtist) {
 				$(this).parents(".song-container").show();
+				
+				// script.albumSelect.html(albumSelectTemplate(uniqueAlbums));
 			} else {
 				$(this).parents(".song-container").hide();
 			}

@@ -1,6 +1,6 @@
 define(
-	["jquery", "script", "populate-songs"],
-	function($, script, populate) {
+	["jquery"],
+	function($) {
 		$("#add").click(function() {
 			console.log("click works");
 			var newSong = {
@@ -14,7 +14,7 @@ define(
 				method: "POST",
 				data: JSON.stringify(newSong)
 			}).done(function(){
-				populate.getJsonData(script.getSongInfo);
+				// populate.getJsonData(script.getSongInfo);
 				$("#main-window").show();
 				$("#side-nav").show();
 				$("#enter-song-info").hide();

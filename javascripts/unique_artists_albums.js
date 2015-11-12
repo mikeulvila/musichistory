@@ -7,7 +7,7 @@ define(["lodash"],
 									.uniq("artist")
 									.pluck("artist")
 									.value();
-				console.log("unique-artists", uniqueArtists);
+				// console.log("unique-artists", uniqueArtists);
 				return uniqueArtists;
 			},
 			getUniqueAlbums: function(dataArray) {
@@ -15,12 +15,16 @@ define(["lodash"],
 									.uniq("album")
 									.pluck("album")
 									.value();
-				console.log("unique-albums", uniqueAlbums);
+				// console.log("unique-albums", uniqueAlbums);
 				return uniqueAlbums;
-			}
-		};
-		// var matchedAlbums = _.chain(config.originalSongsArray)
-		// 					.filter((song) => song.artist === selectedArtist)
-		// 					.uniq(‘album.name’).pluck(‘album’).value();
+			},
+			getMatchedAlbums: function(dataArray) {
+		 		var matchedAlbums = _.chain(config.dataArray)
+		 							.filter(songs, songs.artist === selectedArtist)
+		 							.uniq("album").pluck("album").value();
+		 			console.log("matchedAlbums", matchedAlbums);
+		 		return matchedAlbums;
+			}//--end matched albums
+		};//--end return
 
 });
