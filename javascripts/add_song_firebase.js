@@ -1,6 +1,6 @@
 define(
-	["jquery"],
-	function($) {
+	["jquery", "add_song_promise"],
+	function($, addPromise) {
 		$("#add").click(function() {
 			console.log("click works");
 			var newSong = {
@@ -9,11 +9,8 @@ define(
 				"album": $("#song-album").val()
 				};
 			console.log(newSong);	
-			$.ajax({
-				url: "https://blazing-torch-7461.firebaseio.com/songs.json",
-				method: "POST",
-				data: JSON.stringify(newSong)
-			}).done(function(){
+			addPromise(newSong)
+			.then( function() {
 				// populate.getJsonData(script.getSongInfo);
 				$("#main-window").show();
 				$("#side-nav").show();
