@@ -1,6 +1,5 @@
 define(["lodash"],
 	function(_) {
-
 		return {
 			getUniqueArtists: function(dataArray) {
 				var uniqueArtists = _.chain(dataArray)
@@ -26,5 +25,4 @@ define(["lodash"],
 		 		return matchedAlbums;
 			}//--end matched albums
 		};//--end return
-
 });

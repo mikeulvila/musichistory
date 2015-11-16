@@ -20,8 +20,8 @@ requirejs.config({
 });
 
 require(
-	["bootstrap", "script", "addmusic", "add_song_firebase", "filter", "delete_button", "populate-songs"],
-	function(bootstrap, script, addMusic, addFirebase, filter, deleteButton, populateSongs) {
+	["bootstrap", "script", "add_song_firebase", "filter", "delete_button", "populate-songs"],
+	function(bootstrap, script, addFirebase, filter, deleteButton, populateSongs) {
 		console.log("script111", script);
 	}
 );

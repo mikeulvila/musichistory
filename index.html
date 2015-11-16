@@ -9,152 +9,94 @@
   </head>
 
   <body>
-  	<!-- **************HEADER******************** -->
- 	<h1>Music History</h1>
-  	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a id="list-music" href="#">Playlist</a></li>
-        <li><a id="add-music" href="#" data-toggle="modal" data-target="#myModal">Add Music</a></li>
-        
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-	  	<!-- <header id="main-header">
-	  	  	<div id="top-header">
-	  	  		<div id="logo">
-	  	  			<h1>Music History</h1>
-	  	  		</div>
-	  	  		<div id="discription">
-	  	  			<h3>Probably the best playlist app ever....  probably.</h3>
-	  	  		</div>
-	  	  	</div>
-	  	  	<div id="bottom-header" class="clear-float">
-	  	  		<div id="nav-bar">
-			      <ul id="nav-list">
+  	<!-- ********************HEADER******************** -->
+	 	<h1>Music History</h1>
+	  	<nav class="navbar navbar-default">
+	  		<div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    		<div class="navbar-header">
+	      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        		<span class="sr-only">Toggle navigation</span>
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"></span>
+	      		</button>
+	    		</div> <!-- end .navbar-header -->
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
 			        <li><a href="#">Home</a></li>
-			        <li id="list-music" class="leftnavborder"><a href="#">List Music</a></li>
-			        <li id="add-music" class="leftnavborder"><a href="#">Add Music</a></li>
+			        <li><a id="list-music" href="#">Playlist</a></li>
+			        <li><a id="add-music" href="#" data-toggle="modal" data-target="#myModal">Add Music</a></li>
 			      </ul>
-			    </div>
-		    </div>
-	    </header>
-	    <header id="invisible-header">
-	      <ul id="nav-bar">
-	        <li><a href="#">View Music</a></li>
-	        <li class="leftnavborder"><a href="#">Add Music</a></li>
-	        <li class="leftnavborder"><a href="#">Profile</a></li>
-	      </ul>
-	    </header> -->
+			    </div><!-- /.navbar-collapse -->
+	  		</div><!-- /.container-fluid -->
+			</nav> <!-- .navbar -->
 <!-- ****************ADD MUSIC FEATURE************************ -->
-  	<div id="body-div">
-  	  <div id="body-container">
-		<div class="container">
-		 <div class="row">
-  	  	  <div id="myModal" class="modal fade col-sm-12" role="dialog">
-	       <div id="form-container">    
-			<ul id="enter-song-info">
-		      	<li id="song-info-header">Enter song info:</li>
-		      	<li>Title:</li>
-		      	<li><input type="text" id="song-title" placeholder="Enter title here"></li>
-		      	<li>Artist:</li>  
-		      	<li><input type="text" id="song-artist" placeholder="Enter artist here"></li>
-		      	<li>Album:</li>  
-		      	<li><input type="text" id="song-album" placeholder="Enter album here"></li> 	
-		      	<li><button id="add" data-dismiss="modal"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Add</button></li>
-	        </ul>
-    	</div>
-    	</div>
-	<!--_________SIDE NAV BAR___________________-->
-		  <div class="col-sm-3" id="side-nav">
-			<form method="post">
-				<div class="inner-side-nav">
-					<label for="song-length">Song length:</label>
-					<input type="range" name="song-length" min="0" max="10" step="1" value="5">
-				</div>
-				<div class="inner-side-nav">
-					<label for="artist">Artist:</label>
-					<select id="artist-select">
-						<!-- <option>-Select Artist-</option> -->
-						<!-- <option>The Beatles</option>
-						<option>Michael Jackson</option>
-						<option>Tom Petty</option>
-						<option>Eagles</option>
-						<option>Pearl Jam</option> -->
-					</select>	
-				</div>
-				<div class="inner-side-nav">
-					<label for="album">Album:</label>
-					<select id="album-select">
-						<!-- <option>-Select Album-</option> -->
-						<!-- <option>Abbey Road</option>
-						<option>Thriller</option>
-						<option>Damn The Torpedos</option>
-						<option>Hotel California</option>
-						<option>Ten</option> -->
-					</select>
-				</div>
-				<div class="inner-side-nav">
-					<label>Genre:</label>
-						
-							<table>
-								<tr>
-							        <td><input type="checkbox" name="rock" value="rock"> Rock</td>
-							        <td><input type="checkbox" name="pop" value="pop"> Pop</td>
-							    <tr>
-							        <td><input type="checkbox" name="blues" value="blues"> Blues</td>
-							        <td><input type="checkbox" name="classical" value="classical"> Classical</td>
-							    </tr>
-						    	</tr>
-						    	<tr>
-							        <td><input type="checkbox" name="jazz" value="jazz"> Jazz</td>
-							        <td><input type="checkbox" name="hiphop" value="hiphop"> Hip Hop</td>
-						    	</tr>
-					    	</table>
-					    
-				</div>
-				<div>
-			    	<button id="clear-filter" type="button" class="center-block filter-btn">Clear Filter</button>
-				</div>
-			</form>
-		  </div>
-		
-	<!--____________________MAIN WINDOW___________________-->
-		
-		  <div class="col-sm-7 col-sm-push-1" id="main-window">
-			<div id="song-list-container">
-		  <!-- <div id="song-container">
-			<h2>Something</h2>
-			<ul class="song-info">
-		        <li>The Beatles</li>
-		        <li class="song-info-border">Abbey Road</li>
-		        <li class="song-info-border">Pop</li>
-	      	</ul>
-	      </div> -->
-	      	</div>
-<!-- 	        <button id="more-button">More <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button> -->
-		  </div>
-		</div>
-	   </div>
-	  </div>	
-	</div>
-	<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
+  		<div id="body-div">
+  	  	<div id="body-container">
+					<div class="container">
+		 				<div class="row">
+  	  	  		<div id="myModal" class="modal fade col-sm-12" role="dialog">
+	       				<div id="form-container">    
+									<ul id="enter-song-info">
+		      					<li id="song-info-header">Enter song info:</li>
+		      					<li>Title:</li>
+		      					<li><input type="text" id="song-title" placeholder="Enter title here"></li>
+		      					<li>Artist:</li>  
+		      					<li><input type="text" id="song-artist" placeholder="Enter artist here"></li>
+		      					<li>Album:</li>  
+		      					<li><input type="text" id="song-album" placeholder="Enter album here"></li> 	
+		      					<li><button id="add" data-dismiss="modal"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Add</button></li>
+	        				</ul>
+    						</div> <!-- #form-container -->
+    					</div> <!-- #myModal -->
+	<!--***************SIDE NAV BAR******************************_-->
+		  				<div class="col-sm-3" id="side-nav">
+								<form method="post">
+									<div class="inner-side-nav">
+										<label for="song-length">Volume:</label>
+										<input type="range" name="song-length" min="0" max="10" step="1" value="5">
+									</div> <!-- .inner-side-nav -->
+									<div class="inner-side-nav">
+										<label for="artist">Artist:</label>
+										<select id="artist-select"></select>	
+									</div> <!-- .inner-side-nav -->
+									<div class="inner-side-nav">
+										<label for="album">Album:</label>
+										<select id="album-select"></select>
+									</div> <!-- .inner-side-nav -->
+									<div class="inner-side-nav">
+										<label>Genre:</label>
+										<table>
+											<tr>
+										  	<td><input type="checkbox" name="rock" value="rock"> Rock</td>
+										    <td><input type="checkbox" name="pop" value="pop"> Pop</td>
+										  </tr>
+										  <tr>
+										    <td><input type="checkbox" name="blues" value="blues"> Blues</td>
+										    <td><input type="checkbox" name="classical" value="classical"> Classical</td>
+										  </tr>
+									    <tr>
+										    <td><input type="checkbox" name="jazz" value="jazz"> Jazz</td>
+										    <td><input type="checkbox" name="hiphop" value="hiphop"> Hip Hop</td>
+									    </tr>
+								   	</table>
+									</div> <!-- .inner-side-nav -->
+									<div>
+			    					<button id="clear-filter" type="button" class="center-block filter-btn">Clear Filter</button>
+									</div>
+								</form>
+		  				</div> <!-- .col-sm-3 -->
+	<!--*******************MAIN WINDOW*********************-->
+		  				<div class="col-sm-7 col-sm-push-1" id="main-window">
+								<div id="song-list-container">
+	      				</div> <!-- .song-list-container -->
+		  				</div> <!-- .col-sm-7 -->
+						</div> <!-- .row -->
+	   			</div> <!-- .container -->
+	  		</div>  <!-- body-container -->
+			</div> <!-- body-div -->
+		<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
   </body>
-
- </html>
+</html>

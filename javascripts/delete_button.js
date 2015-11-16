@@ -1,15 +1,17 @@
-define(["jquery"], function($) {
+define(["jquery", "delete_song_promise"], function($, deleteSongPromise) {
 
-/****************DELETE ROW OF SONGS*********************/
+/****************DELETE SONG FROM FIREBASE USING DELETE SONG PROMISE*********************/
 	$(document).on("click", ".delete-button", function(event){
 		console.log("delete button works", event);	
 		event.target.parentElement.remove();
 		var songKey = $(this).attr("id");
-		$.ajax({
-  			url: "https://blazing-torch-7461.firebaseio.com/songs/" + songKey + "/.json",
-  			method: "DELETE"
-			}).done(function() {
-  			alert("Song Deleted");
-  			}); //end .done
-		}); // end click function
-	}); // end define
+		//delete promise *****************
+		deleteSongPromise(songKey)
+		.then(function() {
+			alert("Song Deleted");
+		})
+		.fail(function(error){
+			alert(error);
+		}); //--end deletePromise
+	}); // --end click function
+}); // --end define
