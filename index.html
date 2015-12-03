@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="musichistory">
   <head>
     <meta charset="UTF-8">
     <title>Music History Project</title>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
 
-  <body>
+  <body ng-controller="musicctrl">
   	<!-- **************HEADER******************** -->
  	<h1>Music History</h1>
   	<nav class="navbar navbar-default">
@@ -90,25 +90,11 @@
 				</div>
 				<div class="inner-side-nav">
 					<label for="artist">Artist:</label>
-					<select id="artist">
-						<option>Options</option>
-						<option>The Beatles</option>
-						<option>Michael Jackson</option>
-						<option>Tom Petty</option>
-						<option>Eagles</option>
-						<option>Pearl Jam</option>
-					</select>	
+					<select id="artist" ng-model="combinedSongs" ng-options="song.artist for song in combinedSongs"></select>	
 				</div>
 				<div class="inner-side-nav">
 					<label for="album">Album:</label>
-					<select id="album">
-						<option>Options</option>
-						<option>Abbey Road</option>
-						<option>Thriller</option>
-						<option>Damn The Torpedos</option>
-						<option>Hotel California</option>
-						<option>Ten</option>
-					</select>
+					<select id="album" ng-model="combinedSongs" ng-options="song.album for song in combinedSongs"></select>
 				</div>
 				<div class="inner-side-nav">
 					<label>Genre:</label>
@@ -139,22 +125,23 @@
 		
 		  <div class="col-sm-7 col-sm-push-1" id="main-window">
 			<div id="song-list-container">
-		  <!-- <div id="song-container">
-			<h2>Something</h2>
-			<ul class="song-info">
-		        <li>The Beatles</li>
-		        <li class="song-info-border">Abbey Road</li>
-		        <li class="song-info-border">Pop</li>
-	      	</ul>
-	      </div> -->
+			  <div ng-repeat="song in combinedSongs" id="song-container">
+				<h2>{{song.title}}</h2>
+				<ul class="song-info">
+			        <li>{{song.artist}}</li>
+			        <li class="song-info-border">{{song.album}}</li>
+		      	</ul>
+		      </div>
 	      	</div>
-	        <button id="more-button">More <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+	        <!-- <button id="more-button">More <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button> -->
 		  </div>
 		</div>
 	   </div>
 	  </div>	
 	</div>
-	<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
+	<!--<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>-->
+	<script src="lib/bower_components/angular/angular.min.js"></script>
+	<script src="app/ang101.js"></script>
   </body>
 
  </html>
