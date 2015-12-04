@@ -1,0 +1,7 @@
+<div ng-repeat="song in combinedSongs | filter: searchText" id="song-container">
+	<h2>{{song.title}}</h2>
+	<ul class="song-info">
+        <li>{{song.artist}}</li>
+        <li class="song-info-border">{{song.album}}</li>
+  	</ul>
+</div>

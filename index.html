@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="musichistory">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Music History Project</title>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
 
-  <body ng-controller="musicctrl">
+  <body ng-app="musichistory">
   	<!-- **************HEADER******************** -->
  	<h1>Music History</h1>
   	<nav class="navbar navbar-default">
@@ -28,61 +28,21 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Home</a></li>
-        <li><a id="list-music" href="#">Playlist</a></li>
-        <li><a id="add-music" href="#" data-toggle="modal" data-target="#myModal">Add Music</a></li>
+        <li><a id="list-music" href="/#/songs/list">Playlist</a></li>
+        <li><a id="add-music" href="/#/songs/add">Add Music</a></li>
         
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-	  	<!-- <header id="main-header">
-	  	  	<div id="top-header">
-	  	  		<div id="logo">
-	  	  			<h1>Music History</h1>
-	  	  		</div>
-	  	  		<div id="discription">
-	  	  			<h3>Probably the best playlist app ever....  probably.</h3>
-	  	  		</div>
-	  	  	</div>
-	  	  	<div id="bottom-header" class="clear-float">
-	  	  		<div id="nav-bar">
-			      <ul id="nav-list">
-			        <li><a href="#">Home</a></li>
-			        <li id="list-music" class="leftnavborder"><a href="#">List Music</a></li>
-			        <li id="add-music" class="leftnavborder"><a href="#">Add Music</a></li>
-			      </ul>
-			    </div>
-		    </div>
-	    </header>
-	    <header id="invisible-header">
-	      <ul id="nav-bar">
-	        <li><a href="#">View Music</a></li>
-	        <li class="leftnavborder"><a href="#">Add Music</a></li>
-	        <li class="leftnavborder"><a href="#">Profile</a></li>
-	      </ul>
-	    </header> -->
-<!-- ****************ADD MUSIC FEATURE************************ -->
+<!--*********** MAIN BODY **********************-->
   	<div id="body-div">
   	  <div id="body-container">
 		<div class="container-fluid">
 		 <div class="row">
-  	  	  <div id="myModal" class="modal fade col-sm-12" role="dialog">
-	       <div id="form-container">    
-			<ul id="enter-song-info">
-		      	<li id="song-info-header">Enter song info:</li>
-		      	<li>Title:</li>
-		      	<li><input type="text" id="song-title" placeholder="Enter title here"></li>
-		      	<li>Artist:</li>  
-		      	<li><input type="text" id="song-artist" placeholder="Enter artist here"></li>
-		      	<li>Album:</li>  
-		      	<li><input type="text" id="song-album" placeholder="Enter album here"></li> 	
-		      	<li><button id="add" data-dismiss="modal"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Add</button></li>
-	        </ul>
-    	</div>
-    	</div>
+  	  
 	<!--_________SIDE NAV BAR___________________-->
-		  <div class="col-sm-3" id="side-nav">
+		  <div class="col-sm-3" id="side-nav" ng-controller="musicctrl">
 			<form method="post">
 				<div class="inner-side-nav">
 					<label for="song-length">Song length:</label>
@@ -90,12 +50,13 @@
 				</div>
 				<div class="inner-side-nav">
 					<label for="artist">Artist:</label>
-					<select id="artist" ng-model="combinedSongs" ng-options="song.artist for song in combinedSongs"></select>	
+					<select id="artist" ng-model="selectedArtist" ng-options="song.artist for song in combinedSongs"></select>	
 				</div>
 				<div class="inner-side-nav">
 					<label for="album">Album:</label>
-					<select id="album" ng-model="combinedSongs" ng-options="song.album for song in combinedSongs"></select>
+					<select id="album" ng-model="selectedAlbum" ng-options="song.album for song in combinedSongs"></select>
 				</div>
+				<label>Search: <input ng-model="searchText"></label>
 				<div class="inner-side-nav">
 					<label>Genre:</label>
 						
@@ -125,15 +86,9 @@
 		
 		  <div class="col-sm-7 col-sm-push-1" id="main-window">
 			<div id="song-list-container">
-			  <div ng-repeat="song in combinedSongs" id="song-container">
-				<h2>{{song.title}}</h2>
-				<ul class="song-info">
-			        <li>{{song.artist}}</li>
-			        <li class="song-info-border">{{song.album}}</li>
-		      	</ul>
-		      </div>
-	      	</div>
-	        <!-- <button id="more-button">More <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button> -->
+			  <div ng-view></div>
+	     </div>
+	       
 		  </div>
 		</div>
 	   </div>
@@ -141,7 +96,13 @@
 	</div>
 	<!--<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>-->
 	<script src="lib/bower_components/angular/angular.min.js"></script>
+	<script src="lib/bower_components/angular-route/angular-route.js"></script>
+
 	<script src="app/ang101.js"></script>
+	<script src="app/factories/songStorage.js"></script>
+
+	<script src="app/controllers/musicctrl.js"></script>
+	<script src="app/controllers/songFormCtrl.js"></script>
   </body>
 
  </html>
