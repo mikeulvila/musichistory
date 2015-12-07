@@ -1,16 +1,19 @@
-app.controller("musicctrl", ["$q", "$http", "$scope", "songStorage", 
-  function($q, $http, $scope, songStorage) {
+app.controller("musicctrl", ["$scope", "songsData",
+  function($scope, songsData) {
+    $scope.searchText = "";
+    $scope.selectedArtist = {};
+    $scope.selectedAlbum = {};
 
-  var selectedArtist = {};
-  
-  //define combined songs array
-  $scope.combinedSongs = [];
+   // we add $firebaseArray returned from songsData.js to the $scope.combinedSongs
+   // to be used in our ng-repeat in song-list.html
+    $scope.combinedSongs = songsData;
+    console.log('combinedSongs', $scope.combinedSongs);
 
-  songStorage.loadSongs().then(function() {
-    $scope.combinedSongs = songStorage.getSongs();
-    console.log("combinedSongs after load songs", $scope.combinedSongs);
-    }, function (error) {
-    console.log("error", error);
-  });
+    //clear filter button
+    $scope.clearFilter = function() {
+      $scope.selectedArtist = {};
+      $scope.selectedAlbum = {};
+    };
 
 }]);
+

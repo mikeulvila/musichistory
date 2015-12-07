@@ -27,7 +27,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
         <li><a id="list-music" href="/#/songs/list">Playlist</a></li>
         <li><a id="add-music" href="/#/songs/add">Add Music</a></li>
         
@@ -40,66 +39,20 @@
   	  <div id="body-container">
 		<div class="container-fluid">
 		 <div class="row">
-  	  
-	<!--_________SIDE NAV BAR___________________-->
-		  <div class="col-sm-3" id="side-nav" ng-controller="musicctrl">
-			<form method="post">
-				<div class="inner-side-nav">
-					<label for="song-length">Song length:</label>
-					<input type="range" name="song-length" min="0" max="10" step="1" value="5">
-				</div>
-				<div class="inner-side-nav">
-					<label for="artist">Artist:</label>
-					<select id="artist" ng-model="selectedArtist" ng-options="song.artist for song in combinedSongs"></select>	
-				</div>
-				<div class="inner-side-nav">
-					<label for="album">Album:</label>
-					<select id="album" ng-model="selectedAlbum" ng-options="song.album for song in combinedSongs"></select>
-				</div>
-				<label>Search: <input ng-model="searchText"></label>
-				<div class="inner-side-nav">
-					<label>Genre:</label>
-						
-							<table>
-								<tr>
-							        <td><input type="checkbox" name="rock" value="rock"> Rock</td>
-							        <td><input type="checkbox" name="pop" value="pop"> Pop</td>
-							    <tr>
-							        <td><input type="checkbox" name="blues" value="blues"> Blues</td>
-							        <td><input type="checkbox" name="classical" value="classical"> Classical</td>
-							    </tr>
-						    	</tr>
-						    	<tr>
-							        <td><input type="checkbox" name="jazz" value="jazz"> Jazz</td>
-							        <td><input type="checkbox" name="hiphop" value="hiphop"> Hip Hop</td>
-						    	</tr>
-					    	</table>
-					    
-				</div>
-				<div class="clear-float">
-			    	<input type="submit" value="Filter" style="width: 100px;">
-				</div>
-			</form>
-		  </div>
-		
-	<!--____________________MAIN WINDOW___________________-->
-		
-		  <div class="col-sm-7 col-sm-push-1" id="main-window">
-			<div id="song-list-container">
-			  <div ng-view></div>
-	     </div>
-	       
-		  </div>
-		</div>
+			 <div ng-view></div>
+		 </div>
 	   </div>
 	  </div>	
 	</div>
 	<!--<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>-->
 	<script src="lib/bower_components/angular/angular.min.js"></script>
 	<script src="lib/bower_components/angular-route/angular-route.js"></script>
+	<script src="lib/bower_components/angular-filter/dist/angular-filter.min.js"></script>
+	<script src="lib/bower_components/firebase/firebase.js"></script>
+	<script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
 
 	<script src="app/ang101.js"></script>
-	<script src="app/factories/songStorage.js"></script>
+	<script src="app/factories/songsData.js"></script>
 
 	<script src="app/controllers/musicctrl.js"></script>
 	<script src="app/controllers/songFormCtrl.js"></script>

@@ -1,23 +1,21 @@
-app.controller("songFormCtrl", ["$scope", "songStorage",
-  function($scope, songStorage) {
-
-    /*
-      Add the following code
-    */
+app.controller("songFormCtrl", ["$scope", "songsData",
+  function($scope, songsData) {
+    //add $firebaseArray so we can have combinedSongs in sync with both musicctrl and songFormCtrl
+    $scope.combinedSongs = songsData;
+    //creat object with ng-model on inputs of addSong.html
     $scope.newSong = { 
                         title: "", 
                         artist: "", 
-                        album: ""
+                        album: "",
+                        genre: ""
                       };
 
     $scope.addSong = function() {
-      console.log("newSong", $scope.newSong)
-      songStorage.addSong($scope.newSong);
-      // $scope.songs.$add({
-      //   title: $scope.newSong.title,
-      //   artist: $scope.newSong.artist,
-      //   album: $scope.newSong.album
-      // });
+      // calling $add on a synchronized array is like Array.push(),
+      // except that it saves the changes to our database!
+      $scope.combinedSongs.$add($scope.newSong);
+       // reset the object input
+      $scope.newSong = {};
     };
   }
 ]);

@@ -75,7 +75,7 @@ ul#nav-list li a:hover {
   width: 250px;
   background: #ecf0f1;
   color: black;
-  margin: 150px auto;
+  margin: 0 auto;
   padding: 5px;
   border-radius: 20px;
   box-shadow: inset 0 0 5px #0d1723; }
